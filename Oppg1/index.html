@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppgave 1</title>
+</head>
+
+<body>
+    <h1>Oppgave 1</h1>
+
+    <form style="display: flex; flex-direction: column;">
+        <div>
+            <label for="name">Navn: </label> <input type="text" name="name" id="nameEl">
+        </div>
+        <div>
+            <label for="alder">Alder: </label> <input type="number" name="alder" id="alderEl" min="0">
+        </div>
+        <input type="submit" value="Legg Inn" id="submit" style="width: 5%;">
+    </form>
+
+    <p id="resultat"></p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", (e) => {
+            e.preventDefault();
+            let name = document.getElementById("nameEl").value;
+            let alder = document.getElementById("alderEl").value;
+            if (alder > 0) {
+                document.getElementById("resultat").innerHTML = "Hei " + name + ". Du er " + alder + " år gammel.";
+            } else alert("Feil Alder")
+        })
+    </script>
+</body>
+
+</html>
