@@ -13,34 +13,35 @@
         <label for="text">Navn: </label><input type="text" name="text" id="navn">
         <label for="Alder">Alder: </label><input type="number" min="0" id="alder">
         <div>
-            <input type="radio" name="radio" id="" value="foo">
-            <input type="radio" name="radio" id="" value="bar">
+            <input type="radio" name="radio" id="" value="Brus"> <label for="radio">Brus</label>
+            <input type="radio" name="radio" id="" value="Vann"> <label for="radio">Vann</label>
         </div>
         <div>
-            <input type="checkbox" name="check" id="" value="foo"> <label for="check">foo</label>
-            <input type="checkbox" name="check" id="" value="bar"> <label for="check">bar</label>
+            <input type="checkbox" name="check" id="" value="Potet"> <label for="check">Potet</label>
+            <input type="checkbox" name="check" id="" value="Suppe"> <label for="check">Suppe</label>
         </div>
         <input type="submit" value="submit" id="submit">
     </form>
-    <textarea id="resultat"></textarea>
+    <textarea rows="15" cols="80" id="resultat"></textarea>
     <script>
-        let radioVal;
-        let checkVal;
         document.getElementById("submit").addEventListener("click", (e) => {
             e.preventDefault();
             let name = document.getElementById("navn").value;
             let alder = document.getElementById("alder").value;
             let radios = document.getElementsByName("radio");
             let checks = document.getElementsByName("check");
+            let radioVal = "";
+            console.log(radioVal);
             for (let i = 0; i < radios.length; i++) {
                 if (radios[i].checked) {
                     radioVal = radios[i].value;
                 }
             }
-            if (checks[0].checked) checkVal = "foo";
-            if (checks[1].checked) checkVal += "bar";
+            let checkVal;
+            if (checks[0].checked) checkVal = "Potet";
+            if (checks[1].checked) checkVal += "suppe";
 
-            document.getElementById("resultat").innerHTML = "Hei " + name + ", du er " + alder + " år gammel, og liker " + radioVal;
+            document.getElementById("resultat").innerHTML = "Hei " + name + ", du er " + alder + " år gammel, og liker " + checkVal + " med " + radioVal;
         })
     </script>
 </body>

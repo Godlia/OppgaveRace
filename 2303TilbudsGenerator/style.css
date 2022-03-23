@@ -1,0 +1,25 @@
+.mid {
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.mid :is(p, h1) {
+    padding-left: 5%;
+}
+
+body {
+    width: auto;
+    height: auto;
+    background-color: crimson;
+}
+
+body :is(h1, p) {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
