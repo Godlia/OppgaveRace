@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Betongrør-Kalkulator</title>
+</head>
+
+<body>
+    <form action="" id="form">
+        <div><input type="number" id="yDia" name="YtreDia"> <label for="YtreDia">Ytre Diameter i centimeter</label></div>
+        <div><input type="number" id="iDia" name="IndreDia"> <label for="IndreDia">Indre Diameter i centimer</label></div>
+        <div><input type="number" id="lengde" name="Lengde"> <label for="Lengde">Lengde i centimeter</label></div>
+        <select name="type" id="">
+            <option value="B25">B25</option>
+        </select> <label for="type">Type</label>
+        <div><label id="" for="round">Antall desimaler: </label><input type="range" name="round" id="round" min="0" max="5" oninput="this.nextElementSibling.value = this.value"><output></output></div>
+        <div><input type="submit" id="submit" value="Kalkuler Volum"></div>
+    </form>
+
+    <p id="resultat"></p>
+    <script src="./script.js"></script>
+</body>
+
+</html>
